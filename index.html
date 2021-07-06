@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script> src= "app.js"</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <script>
+
+var backgrounds = ["#0000FF", "#999999", "#FF0000","#fc5e03" ];
+function setColor(el) {
+    el.colorIdx = el.colorIdx || 0;
+    el.style.backgroundColor = backgrounds[el.colorIdx++ % backgrounds.length];
+}
+
+rune1 = document.getElementById("rune1"); 
+
+let rune1color = window.getComputedStyle(rune1).backgroundColor;
+
+if(rune1color = "blue" )
+{
+alert("congrats")
+}
+
+else{
+alert("failed")
+}
+ 
+
+    </script>
+ 
+ <div  id= "rune1" class = "runediv" onclick="setColor(this);"></div>
+
+ <div id= "rune2" class = "runediv" onclick="setColor(this) ; setColor(rune1)"></div>
+ 
+ <div id= "rune3" class = "runediv" onclick="setColor(this) ; setColor(rune1) ; setColor(rune2)"></div>
+
+ <div id= "rune4" class = "runediv" onclick="setColor(this) ; setColor(rune1) ; setColor(rune2) ; setColor(rune3)"></div>
+
+
+ <div class = "chest"]>
+     <img src="closedchest.jpg" alt="A locked treasure chest">
+ </div>
+</body>
+</html>

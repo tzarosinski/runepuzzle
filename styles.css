@@ -1,0 +1,18 @@
+
+body {
+    display:flex;
+    
+}
+.runediv {
+    background: blue;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    
+}
+
+.chest {
+display:flex;
+justify-content: center;
+align-items: center;
+}
