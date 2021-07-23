@@ -1,18 +1,31 @@
 
 body {
     display:flex;
-    
 }
 .runediv {
-    background: blue;
     height: 100px;
     width: 100px;
     margin: 10px;
+    background-size: 100px;
+    border-radius: 10%;
     
 }
+.runeimage {
+    background-image: url(runes/bluerune.jpg);
+    background-size: 100px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
 
+    
+}
 .chest {
-display:flex;
-justify-content: center;
-align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+img {
+width: 100px;
+height: 100px;
+
 }
