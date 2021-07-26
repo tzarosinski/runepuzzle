@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <script> src= "app.js"</script>
@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-  <script src="app.js"></script>
+    <script src="confetti.js"></script>
+  
     
 </head>
 <body>
+    
     <script>
 
 
@@ -39,68 +41,76 @@ function setColor5(el) {
     el.colorIdx = el.colorIdx || 4;
     el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
 }
+let blue = 'url("runes/bluerune.jpg")';
+    let orange = 'url("runes/orangerune.jpg")';
+    let purple = 'url("runes/purplerune.jpg")';
+    let yellow = 'url("runes/yellowrune.jpg")';
+    let green = 'url("runes/greenrune.jpg")';
+    
+    
+window.setInterval( function(){
+    let runeone = document.getElementById("rune1").style.backgroundImage;
+    let runetwo = document.getElementById("rune2").style.backgroundImage;
+    let runethree = document.getElementById("rune3").style.backgroundImage;
+    let runefour = document.getElementById("rune4").style.backgroundImage;
+ 
+
+
+    
+
+
+    if(runeone == orange && runetwo == blue && runethree == green && runefour == purple){
+
+
+        startConfetti();
+
+    }
+    else{
+    console.log(runeone);
+    stopConfetti();
+    };
+    
+},10)
+    
+
+window.setInterval (function(){
+    let runeone = document.getElementById("rune1").style.backgroundImage;
+    let runetwo = document.getElementById("rune2").style.backgroundImage;
+    let runethree = document.getElementById("rune3").style.backgroundImage;
+    let runefour = document.getElementById("rune4").style.backgroundImage;
+ 
+    
+
+if (runeone== orange){
+    document.getElementById('rune1').setAttribute("class", "orangeglow"); 
+} else {
+    document.getElementById('rune1').setAttribute("class", "runediv");
+};
+
+if (runetwo== blue){
+    document.getElementById('rune2').setAttribute("class", "blueglow"); 
+} else {
+    document.getElementById('rune2').setAttribute("class", "runediv");
+};
+if (runethree== green){
+    document.getElementById('rune3').setAttribute("class", "greenglow"); 
+} else {
+    document.getElementById('rune3').setAttribute("class", "runediv");
+};
+if (runefour== purple){
+    document.getElementById('rune4').setAttribute("class", "purpleglow"); 
+} else {
+    document.getElementById('rune4').setAttribute("class", "runediv");
+};
+},10)
 
 /*
-var imgArray = ['url(runes/bluerune.jpg')', runes/greenrune.jpg, runes/orangerune.jpg, runes/purplerune.jpg, runes/yellowrune.jpg"]
 
-
-var imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = 'runes/bluerune.jpg';
-
-imgArray[1] = new Image();
-imgArray[1].src = 'runes/greenrune.jpg';
-
-imgArray[2] = new Image();
-imgArray[2].src = 'runes/orangerune.jpg';
-
-imgArray[3] = new Image();
-imgArray[3].src = 'runes/purplerune.jpg';
-
-imgArray[4] = new Image();
-imgArray[4].src = 'runes/yellowrune.jpg';
-function setBackground(el) {
-    el.imgArrayIdx = el.imgArrayIdx || 1;
-    el.style.backgroundImage = backgrounds[el.backgroundIdx++ % imgArray.length];
-}
-function changeImage() {
-    el.colorIdx = el.colorIdx || 0;
-    el.style.backgroundImage =imgArray[el.colorIdx++ % imgArray.length];
-}
-function changeBackground (el) {
-    el.imgArrayIdx = el.imgArrayIdx || 1;
-document.body.style.backgroundImage = imgArray[el.backgroundIdx ++ % imgArray.length];
-}
-/*
-EXAMPLE
-onclick="document.body.style.backgroundImage = 'url(image.jpg)'"
-
-
-var myImage = document.getElementById("rune1");
-
-var imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = 'bluerune.jpg';
-
-imgArray[1] = new Image();
-imgArray[1].src = 'greenrune.jpg';
-
-imgArray[2] = new Image();
-imgArray[2].src = 'orangerune.jpg';
-
-imgArray[3] = new Image();
-imgArray[3].src = 'purplerune.jpg';
-
-imgArray[4] = new Image();
-imgArray[4].src = 'yellowrune.jpg';
-var imageIndex = 0; 
 */
-
 
     </script>
  <div class = "centerbox">
+
  <div id="rune1" class = "runediv" style = "background-image:url('runes/purplerune.jpg');" onclick="setColor5(rune1)"></div>
 
  <div id="rune2" class = "runediv" style = "background-image:url('runes/greenrune.jpg');" onclick="setColor3(rune2) ; setColor2(rune1)"></div>
@@ -110,37 +120,19 @@ var imageIndex = 0;
  <div id="rune4" class = "runediv" style = "background-image:url('runes/yellowrune.jpg');" onclick="setColor1(rune4) ; setColor2(rune1) ; setColor3(rune2) ; setColor4(rune3)"></div>
 
 
- <div class = "chest"><img src="closedchest.jpg" alt="A locked treasure chest"></div>
 </div>
-<!--
-<div  id= "rune1" class = "runeimage" onclick="changeImage(rune1)";>
-
- <div  id= "rune5" class = "runeimage"  onclick="changeImage(this);"></div>
-
-</div>
--->
- 
 
 <script>
-var runeone = document.getElementById("rune1").style.backgroundImage;
-var runetwo = document.getElementById("rune2").style.backgroundImage;
-var runethree = document.getElementById("rune3").style.backgroundImage;
-var runefour = document.getElementById("rune4").style.backgroundImage;
+
+   
+    
 
 
-/*
-    while (rune1.style.backgroundImage == url('runes/bluerune.jpg') && rune2.style.backgroundImage == url('runes/bluerune.jpg') && rune3.style.backgroundImage == url('runes/bluerune.jpg') && rune4.style.backgroundImage == url('runes/bluerune.jpg')) 
-{
-   console.log("You've done it!!"); 
-}
-*/
- if  (document.getElementById("rune1").style.backgroundImage== "url('runes/bluerune.jpg')") {
-     console.log("you win!")
- }
+    
+    </script>
 
 
 
-</script>
 
 
 
