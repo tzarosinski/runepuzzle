@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="confetti.js"></script>
+  
+    
+
+    
+</head>
+<body>
+    <script src= "app.js"></script>
+
+    <script>
+
+
+
+let backgrounds = ["url('runes/bluerune.jpg')", "url('runes/greenrune.jpg')", "url('runes/orangerune.jpg')","url('runes/purplerune.jpg')","url('runes/yellowrune.jpg')" ];
+function setColor1(el) {
+    el.colorIdx = el.colorIdx || 0;
+    el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
+} 
+
+function setColor2(el) {
+    el.colorIdx = el.colorIdx || 1;
+    el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
+}
+
+function setColor3(el) {
+    el.colorIdx = el.colorIdx || 2;
+    el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
+}
+
+function setColor4(el) {
+    el.colorIdx = el.colorIdx || 3;
+    el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
+}
+function setColor5(el) {
+    el.colorIdx = el.colorIdx || 4;
+    el.style.backgroundImage = backgrounds[el.colorIdx++ % backgrounds.length];
+}
+let blue = 'url("runes/bluerune.jpg")';
+    let orange = 'url("runes/orangerune.jpg")';
+    let purple = 'url("runes/purplerune.jpg")';
+    let yellow = 'url("runes/yellowrune.jpg")';
+    let green = 'url("runes/greenrune.jpg")';
+    
+    
+window.setInterval( function(){
+    let runeone = document.getElementById("rune1").style.backgroundImage;
+    let runetwo = document.getElementById("rune2").style.backgroundImage;
+    let runethree = document.getElementById("rune3").style.backgroundImage;
+    let runefour = document.getElementById("rune4").style.backgroundImage;
+ 
+
+
+    
+
+/* WIN CONDITION*/
+    if(runeone == orange && runetwo == blue && runethree == green && runefour == purple){
+startConfetti() , stopStopwatch();
+/* STOP TIMER
+
+victory report and notification*/
+
+    }
+    else{
+    console.log(runeone);
+    stopConfetti();
+    };
+    
+},10)
+    
+
+window.setInterval (function(){
+    let runeone = document.getElementById("rune1").style.backgroundImage;
+    let runetwo = document.getElementById("rune2").style.backgroundImage;
+    let runethree = document.getElementById("rune3").style.backgroundImage;
+    let runefour = document.getElementById("rune4").style.backgroundImage;
+ 
+    
+/* Glow upon selecting the correct rune*/
+if (runeone== orange){
+    document.getElementById('rune1').setAttribute("class", "orangeglow"); 
+} else {
+    document.getElementById('rune1').setAttribute("class", "runediv");
+};
+
+if (runetwo== blue){
+    document.getElementById('rune2').setAttribute("class", "blueglow"); 
+} else {
+    document.getElementById('rune2').setAttribute("class", "runediv");
+};
+if (runethree== green){
+    document.getElementById('rune3').setAttribute("class", "greenglow"); 
+} else {
+    document.getElementById('rune3').setAttribute("class", "runediv");
+};
+if (runefour== purple){
+    document.getElementById('rune4').setAttribute("class", "purpleglow"); 
+} else {
+    document.getElementById('rune4').setAttribute("class", "runediv");
+};
+},10)
+
+/*
+
+*/
+
+    </script>
+
+
+<!-- BUDDY TIMER
+
+<div id="stopwatch">
+    <div id="hrs" class="sw-component"></div>:<div id="min" class="sw-component"></div>:<div id="sec" class="sw-component"></div>.<div id="mil" class="sw-component"></div>
+    </div>
+    
+    <ul id="buttons">
+    <li><button onclick="startTimer()">Start</button></li>
+    <li><button onclick="stopTimer()">Stop</button></li>
+    <li><button onclick="resetTimer()">Reset</button></li>
+    
+    </ul>
+-->
+
+<div class="container">
+    <p class="elapsed-time-text">00:00</p>
+    <div class="buttons-container">
+        <button type="button" id="start-button" *ngIf="displayStartButton" onclick="startStopwatch()">START</button>
+        <button type="button" id="stop-button" *ngIf="!displayStartButton" onclick="stopStopwatch()">STOP</button>
+        <button type="button" onclick="resetStopwatch()">RESET</button>
+    </div>
+</div>
+ 
+ 
+<div class = "runebox">
+
+    <div id="rune1" class = "runediv" style = "background-image:url('runes/purplerune.jpg');" onclick="setColor5(rune1)"></div>
+   
+    <div id="rune2" class = "runediv" style = "background-image:url('runes/greenrune.jpg');" onclick="setColor3(rune2) ; setColor2(rune1)"></div>
+    
+    <div id="rune3" class = "runediv" style = "background-image:url('runes/orangerune.jpg');" onclick="setColor4(rune3) ; setColor2(rune1) ; setColor3(rune2)"></div>
+   
+    <div id="rune4" class = "runediv" style = "background-image:url('runes/yellowrune.jpg');" onclick="setColor1(rune4) ; setColor2(rune1) ; setColor3(rune2) ; setColor4(rune3)"></div>
+    </div>
+
+    <script src="stopwatch-js-master\stopwatch-js-master\js\time-and-date-handling.js"></script>
+    <script src="stopwatch-js-master\stopwatch-js-master\js\stopwatch.js"></script>
+  
+
+    
+
+
+
+
+</body>
+</html>

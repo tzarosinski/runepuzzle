@@ -1,0 +1,366 @@
+
+body {
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+.runediv {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 20px 3px rgb(0, 0, 0);
+    
+}
+.runeimage {
+    background-image: url(runes/bluerune.jpg);
+    background-size: 100px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+
+    
+}
+.chest {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+img {
+width: 100px;
+height: 100px;
+
+}
+
+.runebox {
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.orangeglow {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 5px #ff5a00, 
+    0 0 10px   #fff1a6,  /* inner white */
+    0 0 40px 5px  #ff5a00; /* middle magenta */
+    
+    transform: scale(1);
+	animation: pulseOrange 2s infinite;
+}
+
+@keyframes pulseOrange {
+	0% {
+        transform: scale(1);
+		box-shadow:
+        inset 0 0 5px #cb5402,
+        0 0 10px #fff1a6, 
+        0 0 40px 5px#cb5402;
+      
+	}
+
+	50% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 20px #cb5402,
+        0 0 10px 3px  #fff1a6, 
+        0 0 60px 10px#cb5402;
+      
+	}
+
+	100% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 5px #cb5402,
+        0 0 10px #fff1a6, 
+        0 0 40px 5px #cb5402;
+    
+	}
+
+}
+.blueglow {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 5px #0084ac, 
+    0 0 10px   #65ffff /* inner white */
+    0 0 40px 5px  #0084ac; /* middle magenta */
+    
+    transform: scale(1);
+	animation: pulseBlue 2s infinite;
+}
+
+@keyframes pulseBlue {
+	0% {
+        transform: scale(1);
+		box-shadow:
+        inset 0 0 5px #0084ac,
+        0 0 10px #65ffff, 
+        0 0 40px 5px#0084ac;
+      
+	}
+
+	50% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 20px #0084ac,
+        0 0 10px 3px  #65ffff, 
+        0 0 60px 10px#0084ac;
+      
+	}
+
+	100% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 5px #0084ac,
+        0 0 10px #65ffff, 
+        0 0 40px 5px #0084ac;
+    
+	}
+}
+.greenglow {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 5px #349c00, 
+    0 0 10px   #ddff8a,
+    0 0 40px 5px  #349c00; /* middle magenta */
+    
+    transform: scale(1);
+	animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+	0% {
+        transform: scale(1);
+		box-shadow:
+        inset 0 0 5px #349c00,
+        0 0 10px #ddff8a, 
+        0 0 40px 5px#349c00;
+      
+	}
+
+	50% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 20px #349c00,
+        0 0 10px 3px  #ddff8a, 
+        0 0 60px 10px#349c00;
+      
+	}
+
+	100% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 5px #349c00,
+        0 0 10px #ddff8a, 
+        0 0 40px 5px #349c00;
+    
+	}
+}
+.yellowglow {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 5px #af8f0f, 
+    0 0 10px   #fff979,
+    0 0 40px 5px  #af8f0f; /* middle magenta */
+    
+    transform: scale(1);
+	animation: pulseYellow 2s infinite;
+}
+
+@keyframes pulseYellow {
+	0% {
+        transform: scale(1);
+		box-shadow:
+        inset 0 0 5px #af8f0f,
+        0 0 10px #fff979, 
+        0 0 40px 5px#af8f0f;
+      
+	}
+
+	50% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 20px #af8f0f,
+        0 0 10px 3px  #fff979, 
+        0 0 60px 10px#af8f0f;
+      
+	}
+
+	100% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 5px #af8f0f,
+        0 0 10px #fff979, 
+        0 0 40px 5px #af8f0f;
+	}
+}
+.purpleglow {
+    flex-direction: row;
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-size: 100px;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 5px #92058d, 
+    0 0 10px   #ffadff,
+    0 0 40px 5px  #92058d; 
+    transform: scale(1);
+	animation: pulsePurple 2s infinite;
+}
+
+@keyframes pulsePurple {
+	0% {
+        transform: scale(1);
+		box-shadow:
+        inset 0 0 5px #92058d,
+        0 0 10px #ffadff, 
+        0 0 40px 5px#92058d;
+      
+	}
+
+	50% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 20px #92058d,
+        0 0 10px 3px  #ffadff, 
+        0 0 60px 10px#92058d;
+      
+	}
+
+	100% {
+        transform: scale(1);
+		box-shadow: 
+        inset 0 0 5px #92058d,
+        0 0 10px #ffadff, 
+        0 0 40px 5px #92058d;
+	}
+}
+
+
+/* Media Queries */
+
+/* Small Devices*/
+
+@media (min-width: 0px) {
+    /* You can add global styles to this file, and also import other style files */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        color: #ffffff;
+
+        font-family: monospace;
+    }
+
+    button {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Generic Button */
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    button:focus {
+        outline: none;
+        border: none;
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+
+    button:active {
+        outline: none;
+    }
+
+    .hide-element {
+        display: none;
+    }
+
+    .container {
+        width: 40%;
+        margin: auto;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elapsed-time-text {
+        text-align: center;
+        font-size: 40px;
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+
+    .buttons-container {
+        width: 240px;
+        margin-top: 40px;
+        display: -webkit-flex;
+        /*targeting Chrome & Safari*/
+        display: -ms-flex;
+        /*targeting IE10*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        background-color: #6ab135;
+        height: 40px;
+        width: 105px;
+        color: #6C6488;
+        font-size: 27px;
+        color: white;
+        font-family: monospace;
+        border-color: #00800012
+    }
+
+    #stop-button {
+        display: none;
+    }
+    #start-button {
+        display:block;
+    }
+}
+

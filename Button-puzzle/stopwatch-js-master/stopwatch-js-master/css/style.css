@@ -1,0 +1,119 @@
+/* Media Queries */
+
+/* Small Devices*/
+
+@media (min-width: 0px) {
+    /* You can add global styles to this file, and also import other style files */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        color: #414142;
+        position: relative;
+        font-family: monospace;
+    }
+
+    button {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Generic Button */
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    button:focus {
+        outline: none;
+        border: none;
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+
+    button:active {
+        outline: none;
+    }
+
+    .hide-element {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: -webkit-flex;
+        /*targeting Chrome & Safari*/
+        display: -ms-flex;
+        /*targeting IE10*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elapsed-time-text {
+        text-align: center;
+        font-size: 40px;
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+
+    .buttons-container {
+        width: 240px;
+        margin-top: 68px;
+        display: -webkit-flex;
+        /*targeting Chrome & Safari*/
+        display: -ms-flex;
+        /*targeting IE10*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        background-color: #6ab135;
+        height: 40px;
+        width: 105px;
+        color: #6C6488;
+        font-size: 27px;
+        color: white;
+        font-family: monospace;
+        border-color: #00800012
+    }
+
+    #stop-button {
+        display: none;
+    }
+}
+
+/* Medium devices */
+
+@media (min-width: 768px) {}
+
+/* Large devices */
+
+@media (min-width: 992px) {}
+
+/*Ipad pro view*/
+
+/* 
+  @media (min-width: 1024px) {
+  
+  } */
+
+/* Extra Large devices */
+
+@media (min-width: 1200px) {}
