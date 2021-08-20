@@ -15,7 +15,7 @@ body {
     background-size: 100px;
     border-radius: 50%;
     box-shadow:inset 0px 0px 20px 3px rgb(0, 0, 0);
-    
+    min-width: 100px;
 }
 .runeimage {
     background-image: url(runes/bluerune.jpg);
@@ -44,6 +44,8 @@ height: 100px;
     justify-content: center;
     align-items: center;
     padding-top: 150px;
+    min-width: 430px;
+    
 }
 
 .orangeglow {
@@ -280,7 +282,7 @@ height: 100px;
     body {
         color: #ffffff;
 
-        font-family: monospace;
+        font-family: Verdana;
     }
 
     button {
@@ -314,9 +316,10 @@ height: 100px;
     }
 
     .container {
-        width: 40%;
+        width: 50%;
+        min-width: 400px;
         margin: auto;
-        background-color: blue;
+        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -346,14 +349,13 @@ height: 100px;
     }
 
     button {
-        background-color: #6ab135;
         height: 40px;
         width: 105px;
         color: #6C6488;
         font-size: 27px;
         color: white;
         font-family: monospace;
-        border-color: #00800012
+        border-color: ;
     }
 
     #stop-button {
